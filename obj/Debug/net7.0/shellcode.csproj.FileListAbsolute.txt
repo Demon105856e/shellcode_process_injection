@@ -1,0 +1,14 @@
+C:\Users\Demon\MALWAREDEV\shellcode\bin\Debug\net7.0\shellcode.exe
+C:\Users\Demon\MALWAREDEV\shellcode\bin\Debug\net7.0\shellcode.deps.json
+C:\Users\Demon\MALWAREDEV\shellcode\bin\Debug\net7.0\shellcode.runtimeconfig.json
+C:\Users\Demon\MALWAREDEV\shellcode\bin\Debug\net7.0\shellcode.dll
+C:\Users\Demon\MALWAREDEV\shellcode\bin\Debug\net7.0\shellcode.pdb
+C:\Users\Demon\MALWAREDEV\shellcode\obj\Debug\net7.0\shellcode.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Demon\MALWAREDEV\shellcode\obj\Debug\net7.0\shellcode.AssemblyInfoInputs.cache
+C:\Users\Demon\MALWAREDEV\shellcode\obj\Debug\net7.0\shellcode.AssemblyInfo.cs
+C:\Users\Demon\MALWAREDEV\shellcode\obj\Debug\net7.0\shellcode.csproj.CoreCompileInputs.cache
+C:\Users\Demon\MALWAREDEV\shellcode\obj\Debug\net7.0\shellcode.dll
+C:\Users\Demon\MALWAREDEV\shellcode\obj\Debug\net7.0\refint\shellcode.dll
+C:\Users\Demon\MALWAREDEV\shellcode\obj\Debug\net7.0\shellcode.pdb
+C:\Users\Demon\MALWAREDEV\shellcode\obj\Debug\net7.0\shellcode.genruntimeconfig.cache
+C:\Users\Demon\MALWAREDEV\shellcode\obj\Debug\net7.0\ref\shellcode.dll
