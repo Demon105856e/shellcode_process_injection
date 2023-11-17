@@ -6,3 +6,11 @@ You can get meterpreter sessions through this, also you can inject shellcode int
 You can add any of the shellcode in this code i have added the reverse_tcp shell code into this you can add yours
 
 Note :- Please don't use this shellcode in unethical way
+
+```
+dotnet run <filename>
+```
+OR
+```
+dotnet build <filename>
+```
